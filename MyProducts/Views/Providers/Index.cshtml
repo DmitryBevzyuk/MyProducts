@@ -1,0 +1,32 @@
+﻿@model IEnumerable<MyProducts.Models.Providers>
+@{
+    ViewData["Title"] = "Список поставщиков";
+}
+<p>
+    <a class="btn btn-primary btn-sm" href="../Providers/Create">Добавить нового поставщика в список</a>
+</p>
+
+<table class="table table-striped">
+    <thead>
+        <tr scope="col">
+            <th>Код</th>
+            <th>Наименование</th>
+            <th>Описание</th>
+            <th>Редактирование</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr scope="row">
+            <td>@item.Id</td>
+            <td>@item.Name</td>
+            <td>@item.Description</td>
+            <td>
+                <a asp-action="Edit" asp-controller="Providers" asp-route-id="@item.Id">Изменить</a> |
+                <a asp-action="Delete" asp-controller="Providers" asp-route-id="@item.Id">Удалить</a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

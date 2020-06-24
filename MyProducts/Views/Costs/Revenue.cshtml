@@ -1,0 +1,30 @@
+﻿@model MyProducts.Models.ViewModelRevenueList
+
+<div class="text-center">
+    <h1 class="display-4">Суммарная прибыль: <b>@Model.getAllRevenue()</b></h1>
+</div>
+<table class="table table-striped">
+    <thead>
+        <tr scope="col">
+            <th>Код продажи</th>
+            <th>Рыночная цена</th>
+            <th>Закупочная цена</th>
+            <th>Объём продаж</th>
+            <th>Доп. затраты на 1 ед. товара</th>
+            <th>Прибыль</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (int i = 0; i < Model.list.Count; i++)
+        {
+            <tr scope="row">
+                <td>@Model.list[i].Id</td>
+                <td>@Model.list[i].EndPrice</td>
+                <td>@Model.list[i].StartPrice</td>
+                <td>@Model.list[i].Volume</td>
+                <td>@Model.list[i].Cost</td>
+                <td><b>@Model.RevenueList[i]</b></td>
+            </tr>
+        }
+    </tbody>
+</table>

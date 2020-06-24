@@ -1,0 +1,34 @@
+﻿@model IEnumerable<MyProducts.Models.Costs>
+@{
+    ViewData["Title"] = "Прайс лист";
+}
+<p>
+    <a class="btn btn-primary btn-sm" href="../Costs/Create">Добавить новый товар таблицу реализации</a>
+</p>
+
+<table class="table table-striped">
+    <thead>
+        <tr scope="col">
+            <th>Код</th>
+            <th>Код продукта</th>
+            <th>Объём продаж</th>
+            <th>Расходы на 1 ед. проданного товара</th>
+            <th>Редактирование</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr scope="row">
+            <td>@item.Id</td>
+            <td>@item.ProductId</td>
+            <td>@item.Volume</td>
+            <td>@item.Cost</td>
+            <td>
+                <a asp-action="Edit" asp-controller="Costs" asp-route-id="@item.Id">Изменить</a> |
+                <a asp-action="Delete" asp-controller="Costs" asp-route-id="@item.Id">Удалить</a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,26 @@
+﻿@model MyProducts.Models.Costs
+@{
+    ViewBag.Title = "Редактирование данных прайс листа";
+}
+<div class="w-50 form-group">
+    <form method="post">
+        <div class="form-group">
+            <label asp-for="ProductId" class="control-label">Код товара из прайс листа</label>
+            <input asp-for="ProductId" class="form-control" />
+            <span asp-validation-for="ProductId" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Volume" class="control-label">Объём продаж</label>
+            <input asp-for="Volume" class="form-control" />
+            <span asp-validation-for="Volume" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Cost" class="control-label">Расходы на 1 еденицу проданного товара</label>
+            <input asp-for="Cost" class="form-control" />
+            <span asp-validation-for="Cost" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Сохранить" class="form-control" />
+        </div>
+    </form>
+</div>

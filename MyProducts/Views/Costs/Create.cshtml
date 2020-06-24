@@ -1,0 +1,26 @@
+﻿@model MyProducts.Models.Costs
+@{
+    ViewData["Title"] = "Добавить товар в таблицу реализации";
+}
+<p>
+    <a class="btn btn-primary btn-sm" href="../Costs/Index">Посмотреть всю таблицу реализации</a>
+</p>
+<div class="w-50 form-group">
+    <p class="text-primary"><b>@ViewBag.name</b></p>
+    <div class="validation text-danger" asp-validation-summary="All"></div>
+    <form method="post" asp-action="Create">
+        <p>
+            <label asp-for="ProductId">Код товара из прайс листа:</label>
+            <input asp-for="ProductId" class="form-control" />
+        </p>
+        <p>
+            <label asp-for="Volume">Объём продаж данного товара:</label>
+            <input asp-for="Volume" class="form-control" />
+        </p>
+        <p>
+            <label asp-for="Cost">Расходы на 1 еденицу проданного товара:</label>
+            <input asp-for="Cost" class="form-control" />
+        </p>
+        <button type="submit" class="form-control">Добавить товар</button>
+    </form>
+</div>

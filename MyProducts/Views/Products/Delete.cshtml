@@ -1,0 +1,17 @@
+﻿@model MyProducts.Models.Products
+@{
+    ViewBag.Title = "Удаление товара";
+}
+
+<div class="w-50">
+    <div>
+        <p>Вы действительно хотите удалить товар "<b>@Model.Name</b>"?</p>
+    </div>
+    <div>
+        <form method="post">
+            <div class="form-group">
+                <input type="submit" class="form-control" value="Удалить" />
+            </div>
+        </form>
+    </div>
+</div>

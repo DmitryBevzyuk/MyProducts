@@ -1,0 +1,34 @@
+﻿@model MyProducts.Models.PriceList
+@{
+    ViewData["Title"] = "Добавить товар в прайс лист";
+}
+<p>
+    <a class="btn btn-primary btn-sm" href="../PriceList">Посмотреть весь прайс лист</a>
+</p>
+<div class="w-50 form-group">
+    <p class="text-primary"><b>@ViewBag.name</b></p>
+    <div class="validation text-danger" asp-validation-summary="All"></div>
+    <form method="post">
+        <p>
+            <label asp-for="ProductId">Код товара:</label>
+            <input asp-for="ProductId" class="form-control" />
+        </p>
+        <p>
+            <label asp-for="ProviderId">Код поставщика:</label>
+            <input asp-for="ProviderId" class="form-control" />
+        </p>
+        <p>
+            <label asp-for="StartPrice">Закупочная цена:</label>
+            <input asp-for="StartPrice" class="form-control" />
+        </p>
+        <p>
+            <label asp-for="EndPrice">Рыночная цена:</label>
+            <input asp-for="EndPrice" class="form-control" />
+        </p>
+        <p>
+            <label asp-for="Description">Описание:</label>
+            <input asp-for="Description" class="form-control" />
+        </p>
+        <button type="submit" class="form-control">Добавить товар</button>
+    </form>
+</div>

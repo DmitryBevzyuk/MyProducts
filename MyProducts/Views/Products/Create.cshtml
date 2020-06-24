@@ -1,0 +1,22 @@
+﻿@model MyProducts.Models.Products
+@{
+    ViewData["Title"] = "Добавить товар";
+}
+<p>
+    <a class="btn btn-primary btn-sm" href="../Products">Посмотреть весь список товаров</a>
+</p>
+<div class="w-50 form-group">
+    <p class="text-primary"><b>@ViewBag.name</b></p>
+    <form method="post" asp-action="Create">
+        <p>
+            <label asp-for="Name">Название товара:</label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </p>
+        <p>
+            <label asp-for="AddDate">Дата добавления товара (не обязательно):</label>
+            <input asp-for="AddDate" class="form-control" />
+        </p>
+        <button type="submit" class="form-control">Добавить товар</button>
+    </form>
+</div>

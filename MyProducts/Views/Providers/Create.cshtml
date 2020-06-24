@@ -1,0 +1,22 @@
+﻿@model MyProducts.Models.Providers
+@{
+    ViewData["Title"] = "Добавить поставщика";
+}
+<p>
+    <a class="btn btn-primary btn-sm" href="../Providers">Посмотреть весь список поставщиков</a>
+</p>
+<div class="w-50 form-group">
+    <p class="text-primary"><b>@ViewBag.name</b></p>
+    <form method="post">
+        <p>
+            <label asp-for="Name">Наименование поставщика:</label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </p>
+        <p>
+            <label asp-for="Description">Описание поставщика (не обязательно):</label>
+            <input asp-for="Description" class="form-control" />
+        </p>
+        <button type="submit" class="form-control">Добавить поставщика</button>
+    </form>
+</div>
