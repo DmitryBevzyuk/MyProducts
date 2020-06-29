@@ -8595,11 +8595,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dimon\\source\\repos\\MyProducts\\MyProducts\\MyProducts.csproj",
+      "projectUniqueName": "C:\\Users\\dimon\\Desktop\\MyProducts\\MyProducts\\MyProducts.csproj",
       "projectName": "MyProducts",
-      "projectPath": "C:\\Users\\dimon\\source\\repos\\MyProducts\\MyProducts\\MyProducts.csproj",
+      "projectPath": "C:\\Users\\dimon\\Desktop\\MyProducts\\MyProducts\\MyProducts.csproj",
       "packagesPath": "C:\\Users\\dimon\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dimon\\source\\repos\\MyProducts\\MyProducts\\obj\\",
+      "outputPath": "C:\\Users\\dimon\\Desktop\\MyProducts\\MyProducts\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\dimon\\AppData\\Roaming\\NuGet\\NuGet.Config",
